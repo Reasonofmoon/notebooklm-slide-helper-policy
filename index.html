@@ -1,123 +1,35 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy | NotebookLM Slide Command Helper</title>
-  <style>
-    :root {
-      --bg: #f7fafc;
-      --card: #ffffff;
-      --text: #1a202c;
-      --muted: #4a5568;
-      --line: #e2e8f0;
-      --brand: #0f6cab;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    .wrap {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 32px 16px 48px;
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 28px 24px;
-    }
-    h1 {
-      margin: 0 0 8px;
-      font-size: 28px;
-      line-height: 1.2;
-    }
-    h2 {
-      margin-top: 28px;
-      font-size: 20px;
-      line-height: 1.3;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 8px;
-    }
-    p, li { color: var(--text); }
-    .muted {
-      color: var(--muted);
-      font-size: 14px;
-      margin-top: 0;
-    }
-    code {
-      background: #edf2f7;
-      padding: 1px 6px;
-      border-radius: 6px;
-      font-size: 0.95em;
-    }
-    a { color: var(--brand); }
-    footer {
-      margin-top: 24px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-  </style>
-</head>
-<body>
-  <main class="wrap">
-    <article class="card">
-      <h1>Privacy Policy</h1>
-      <p class="muted">NotebookLM Slide Command Helper</p>
-      <p class="muted">Last updated: February 18, 2026</p>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Privacy Policy | Notebook Workbench for Gemini Notebook</title><style>body{margin:0;background:#f6f7f9;color:#202736;font:16px/1.75 system-ui,sans-serif}main{max-width:880px;margin:32px auto;background:white;padding:36px;border:1px solid #e1e5ec;border-radius:10px}h1{font-size:28px;line-height:1.35}h2{font-size:20px;margin-top:32px;border-bottom:1px solid #e1e5ec;padding-bottom:8px}.bullet{padding-left:18px;border-left:2px solid #e1e5ec}a{color:#2459cd}@media(max-width:600px){main{margin:0;padding:22px;border:0}}</style></head><body><main><h1>Privacy policy · 2026-10-27</h1>
 
-      <h2>Overview</h2>
-      <p>
-        NotebookLM Slide Command Helper does not collect, sell, or transmit personal data
-        to external servers.
-      </p>
+<p>Notebook Workbench for Gemini Notebook is an independent Chrome extension. It is not affiliated with, endorsed by, or sponsored by Google.</p>
 
-      <h2>Data Processed</h2>
-      <p>The extension stores only the following data in Chrome local extension storage:</p>
-      <ul>
-        <li>Saved prompts created by the user</li>
-        <li>Recent prompts used by the user</li>
-      </ul>
-      <p>
-        This data is stored locally in the user's browser profile
-        (<code>chrome.storage.local</code>) and is used only to provide extension functionality.
-      </p>
+<h2>Local table tools</h2>
 
-      <h2>Data Not Collected</h2>
-      <p>The extension does <strong>not</strong> collect:</p>
-      <ul>
-        <li>Personal identity information</li>
-        <li>Browsing history outside target pages</li>
-        <li>Authentication credentials</li>
-        <li>Financial or health information</li>
-      </ul>
+<p>The extension reads tables already loaded in a supported notebook page only when the user asks it to find tables. The user chooses which tables to save. Tables, notebook page titles/URLs, capture timestamps, visible cell-link references, and row provenance are stored in `chrome.storage.local` on this browser. Imported CSV/TSV/Markdown files are processed locally. Charts and follow-up prompt templates are produced locally. No developer backend, analytics SDK, advertising tracker, or third-party telemetry is used.</p>
 
-      <h2>Data Sharing</h2>
-      <p>
-        No data is sent to third parties.<br />
-        No analytics, tracking pixels, or remote telemetry are included.
-      </p>
+<p>Local CSV, SVG, and JSON downloads are created when the user requests them. Backups contain table data and provenance and may be sensitive. Keep them private. Table backup files do not include legacy slide API keys or saved slide prompts.</p>
 
-      <h2>Permissions Justification</h2>
-      <ul>
-        <li><code>storage</code>: required to save user prompt presets and recent history.</li>
-      </ul>
+<h2>User-controlled use of Google services</h2>
 
-      <h2>Contact</h2>
-      <p>
-        For support or privacy-related requests, contact the extension publisher through
-        the Chrome Web Store support channel.
-      </p>
+<p>When the user chooses to insert a generated prompt into a notebook, the extension fills the identified input only. It does not click Submit. After the user submits it, Google's service handles the submitted content under Google's terms and privacy policies. Existing input text is not overwritten.</p>
 
-      <footer>
-        This page is published for Chrome Web Store privacy disclosure.
-      </footer>
-    </article>
-  </main>
-</body>
-</html>
+<p>The optional legacy slide Vision feature is different from local table processing. After an explicit confirmation, the extension captures the currently visible tab screenshot and sends it, together with the current draft prompt and selected analysis options, directly to `https://generativelanguage.googleapis.com/` using the user's Gemini API key. API charges may apply. Google processes that request under its applicable API terms. The developer does not receive the screenshot, prompt, or API key.</p>
+
+<p>The user's Gemini API key, saved slide prompts, recent prompts, and UI preferences remain in local extension storage. Chrome local extension storage is not a dedicated encrypted password vault. Do not use Vision on screens containing sensitive information or credentials.</p>
+
+<h2>Permissions</h2>
+
+<p class="bullet">`storage`: local tables, provenance, preferences, and the existing slide tools' prompts/API key.</p>
+<p class="bullet">`activeTab`: access to the currently active tab after a user action; used by the optional screenshot-based Vision feature.</p>
+<p class="bullet">Content scripts on `https://notebook.google.com/*` and `https://notebooklm.google.com/*`: explicit table collection and input filling.</p>
+<p class="bullet">`https://generativelanguage.googleapis.com/*`: direct requests for the optional Gemini Vision feature.</p>
+
+<p>No broad all-sites access, cookies permission, browsing-history permission, or private Notebook RPC is used.</p>
+
+<h2>Retention and deletion</h2>
+
+<p>Saved data stays in this browser until deleted from the table library, removed through browser extension storage controls, or the extension is uninstalled. Uninstalling normally removes extension-local data. Export backups first if needed. Deleting a local table does not change the source notebook. Local JSON restore replaces the table library only after a confirmation. It does not delete existing slide prompts or API keys.</p>
+
+<h2>한국어 요약</h2>
+
+<p>표 수집·정리·차트·프롬프트 조합은 브라우저 안에서 처리합니다. 사용자가 선택한 표의 값과 출처를 로컬에 보관합니다. 자동 제출·원본 삭제·분석 추적은 없습니다. 사용자가 프롬프트를 Google에 직접 제출하면 Google의 처리 정책이 적용됩니다. 선택형 슬라이드 Vision만 별도 동의 후 화면 이미지와 프롬프트를 Google Gemini API에 보냅니다. API 키는 로컬에 저장되며 백업 JSON에는 포함하지 않습니다.</p>
+<h2>Limited Use</h2><p>The use of information received from Google APIs will adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements. User data is used only for the disclosed notebook-output workflow, not advertising, resale, creditworthiness, or unrelated profiling. The developer has no backend access to users’ local data.</p><h2>Contact</h2><p>For support or privacy requests, contact the publisher through the <a href="https://chromewebstore.google.com/detail/abkgihoefklaoedgonmhkbehmbginhpc">Chrome Web Store listing</a>.</p></main></body></html>
